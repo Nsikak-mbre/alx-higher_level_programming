@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 str1 = 'Last digit of'
-last_digit = number % 10
+last_digit = abs(number) % 10
 if last_digit > 5:
     print('{0} {1} is {2} and is greater than 5'.format(
         str1, number, last_digit))
