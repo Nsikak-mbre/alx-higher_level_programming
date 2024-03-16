@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def islower(c):
-    if len(c) != 1 or not c.isalpha():
-        return False
-    elif 'a' <= c <= 'z':
+    if isinstance(c, str) and len(c) == 1 and 97 <= ord(c) <= 122:
         return True
     else:
         return False
