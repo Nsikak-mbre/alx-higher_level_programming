@@ -14,4 +14,4 @@ else:
 
 
 if __name__ == "__main__":
-    print('do not import')
+    """Print list and arg"""
