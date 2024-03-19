@@ -14,4 +14,4 @@ else:
 
 
 if __name__ == "__main__":
-    """Print list and arg"""
+    """Print args and count"""
