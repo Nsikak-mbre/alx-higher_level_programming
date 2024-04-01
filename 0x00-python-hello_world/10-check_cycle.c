@@ -1,4 +1,4 @@
-#inlcude "list.h"
+#include "lists.h"
 
 /**
  * check_cycle - checks for a cycle in a list
@@ -7,7 +7,17 @@
  */
 int check_cycle(listint_t *list)
 {
-	while(list ! = NULL)
+	listint_t *slow = list;
+	listint_t *fast = list;
+
+	while (fast != NULL && fast->next != NULL)
 	{
-		if
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if (slow == fast)
+			return (1);
+	}
+	return (0);
+}
 
