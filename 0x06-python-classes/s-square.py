@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define square class"""
+"""include setter & getter methods"""
 
 
 class Square:
