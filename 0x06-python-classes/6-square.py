@@ -44,7 +44,7 @@ class Square:
     def my_print(self):
         """Print square with character # using position values"""
         if self.__size == 0:
-            print('')
+            print()
             return
 
         for _ in range(self.position[1]):
