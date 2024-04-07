@@ -14,4 +14,5 @@ def safe_print_integer(value):
         print(formatted_value)
         return True
     except ValueError:
+        pass
         return False
