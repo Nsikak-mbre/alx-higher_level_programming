@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Sum of two numbers"""
 
 def add_integer(a, b=98):
     """sums two Integers.
@@ -8,7 +9,7 @@ def add_integer(a, b=98):
     b (int): Integer by user or default
 
     Returns:
-    Int: summation or an exception
+    Int: sum or an exception if wrong type is provided
     """
     if isinstance(a, (int, float)):
         a = int(a)
