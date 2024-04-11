@@ -57,3 +57,4 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
