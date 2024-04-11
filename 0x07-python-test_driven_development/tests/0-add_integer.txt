@@ -1,0 +1,24 @@
+
+
+Testing 0-add_integer.py
+===========================
+
+This module defines an integer addition function ``add_integer(a, b=98)``.
+
+Usage
+=====
+# First Import function
+# Begin test with whole integers
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+
+
+# Sum with a negative number
+>>> add_integer(4, -1)
+3
+
+# with floating point values
+>>> add_integer(2.2, 3.3)
+5
