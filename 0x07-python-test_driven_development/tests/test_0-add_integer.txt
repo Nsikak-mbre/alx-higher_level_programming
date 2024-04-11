@@ -3,12 +3,14 @@
 Test 0-add_integer.py
 ===========================
 
-This module defines an integer addition function ``add_integer(a, b=98)``.
+-This module defines an integer addition function ``add_integer(a, b=98)``.
+-Note all floating point values are typecasted
+-Program provides an optional second parameter
 
 Usage
 =====
 # First Import function
-# Begin test with whole integers
+# Begin test with different types
 
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(2, 3)
@@ -23,6 +25,10 @@ Usage
 >>> add_integer(2.2, 3.3)
 5
 
+# floating point values and non floating point value
+>>> add_integer(3.3, 5)
+8
+
 # Test with large-numbers
 >>> add_integer(10**9, 10**9)
 2000000000
@@ -36,3 +42,7 @@ TypeError: a must be an integer
 >>> print(add_integer(2, 'cat'))
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+#Test with optional provided parametet
+>>> print(add_integer(2))
+100
