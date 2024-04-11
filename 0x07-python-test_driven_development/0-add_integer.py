@@ -12,9 +12,15 @@ def add_integer(a, b=98):
     Returns:
     Int: sum or an exception if wrong type is provided
     """
-    if ((not isinstance(a, int) and not isinstance(a, float))):
+    if isinstance(a, (int, float)):
+        a = int(a)
+    else:
         raise TypeError('a must be an integer')
-    if ((not isinstance(b, int) and not isinstance(b, float))):
+
+    if isinstance(b, (int, float)):
+        b = int(b)
+    else:
         raise TypeError('b must be an integer')
-    return int(a) + int(b)
+
+    return a + b
 # according to requirement
