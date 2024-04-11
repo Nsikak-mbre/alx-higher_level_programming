@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-""" Sum of two numbers
-    loremdjf jwwiwiwi
-    wjejj ididiidi
-    fkfkkfkkfd
+""" Sum of two int
 """
 
 def add_integer(a, b=98):
