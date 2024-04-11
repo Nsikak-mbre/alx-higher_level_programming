@@ -17,6 +17,7 @@ class Rectangle:
 
         @property
         def width(self):
+            """Using property decorator to get/set width"""
             return self.__width
 
         @width.setter
@@ -29,6 +30,7 @@ class Rectangle:
 
         @property
         def height(self):
+            """Property decorater to define getter/setter methods"""
             return self.__height
 
         @height.setter
