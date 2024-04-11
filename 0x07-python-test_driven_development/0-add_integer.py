@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Sum of two int
-"""
+""" Sum of two int"""
+
 
 def add_integer(a, b=98):
     """sums two Integers.
@@ -23,4 +23,4 @@ def add_integer(a, b=98):
         raise TypeError('b must be an integer')
 
     return a + b
-
+# according to requirement
