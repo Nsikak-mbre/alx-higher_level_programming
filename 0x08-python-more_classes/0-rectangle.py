@@ -1,11 +1,6 @@
 #!/usr/bin/python3
+"""Defines a Rectangle class"""
+
+
 class Rectangle:
-    """ A Rectangle class"""
-
-    def __init__(self):
-        """Initializes class Object.
-
-        Args:
-            None
-        """
-# empty line as required
+    pass
