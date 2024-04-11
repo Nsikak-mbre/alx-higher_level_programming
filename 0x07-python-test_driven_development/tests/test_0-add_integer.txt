@@ -46,3 +46,8 @@ TypeError: b must be an integer
 #Test with optional provided parametet
 >>> print(add_integer(2))
 100
+
+#Test for inifinity values
+>>> print(add_integer(float('inf')))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
