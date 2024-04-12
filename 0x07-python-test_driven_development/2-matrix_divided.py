@@ -1,12 +1,19 @@
 #!/usr/bin/python3
 """Divide elements of a Matrix"""
+
+
 def matrix_divided(matrix, div):
     """Function takes two arguments.
 
     Parameters:
     matrix (list): list of integers
-    dit
-    (int): divider
+    div: (int/float) The divisor
+
+    Raises:
+        TypeError: if user inputs wrong types
+        TypeError: Rows sizes dont match
+        TypeError: If div type does not match requirement
+        ZeroDivisionError: if div is 0
 
     Returns:
     (list): new matrix where elements are divided by the divisor
