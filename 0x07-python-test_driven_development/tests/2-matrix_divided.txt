@@ -83,3 +83,10 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+# Test with wrong type for second arg
+>>> matrix = [[2, 5, 7], [2, 4, 6]]
+>>> matrix_divided(matrix, 'str')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
