@@ -1,0 +1,85 @@
+		Test  Matrix divider
+==========================================================
+
+This aims to test the function matrix_divided
+- Function receives a Matrix which serves as a list containing other list, which in turn
+contains element of value (int) or (float)
+ - Fractions are rounded off to 2 decimal places
+
+- Second parameter is the divideder
+
+Usage
+=====
+
+#Importing function
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Test with regular integer
+>>> matrix = [
+...	[2, 4, 6],
+...	[3, 6, 9]
+...	]
+>>> matrix_divided(matrix, 2)
+[[1.0, 2.0, 3.0], [1.5, 3.0, 4.5]]
+
+# Test with floating point value
+>>> matrix = [
+...	[1.2, 2.2, 3.3],
+...	[3, -4.5, 5]
+...	]
+>>> matrix_divided(matrix, 2)
+[[0.6, 1.1, 1.65], [1.5, -2.25, 2.5]]
+
+# Test with invalid first parameter
+>>> matrix = 'str'
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test with None provided as first Argument
+>>> matrix = None
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test with list which does not exactly contain another list
+>>> matrix = [3, 2, 1]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test sizes of sub_list
+>>> matrix = [
+...	[1, 2, 3, 4, 5],
+...	[2, 2, 2]
+...	]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+# Test for second arg: (div)
+>>> matrix = [
+...	[1, 3, 6],
+...	[3, 5, 6]
+... ]
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+# Test with float point div
+>>> matrix = [[2, 3, 4], [3, 4, 6]]
+>>> matrix_divided(matrix, 2.5)
+[[0.8, 1.2, 1.6], [1.2, 1.6, 2.4]]
+
+# Test for 0 as div
+>>> matrix = [[2,4,8], [8, 3, 5]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
