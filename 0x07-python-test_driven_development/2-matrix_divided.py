@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Divide elements of a Matrix"""
 def matrix_divided(matrix, div):
     """Function takes two arguments.
 
