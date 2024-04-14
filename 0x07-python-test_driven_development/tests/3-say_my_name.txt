@@ -44,3 +44,9 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+# Test with both wrong parameters
+>>> say_my_name(11, 11)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
