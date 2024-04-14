@@ -1,0 +1,40 @@
+			Test say_my_name  function
+			==========================
+This aims to test say_my_name with possible edge cases, and values users might input, to 
+ensure the right exception is thrown
+- Function accepts two (string) parameters
+- Lastname is optional
+- Sends any error custom message when wrong type is supplied
+
+Start by Importing Function to be tested
+========================================
+
+# Test with expected value
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name('Nsikak', 'Sunday')
+My name is Nsikak Sunday
+
+# Test with optional last Name
+>>> say_my_name('Nsikak')
+My name is Nsikak
+
+# Test with non string values
+>>> say_my_name('Nsikak', 007)
+Traceback (most recent call last):
+...
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+
+>>> say_my_name('Nsikak', 7)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(2.3, 'Nsikak')
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# Test with None
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
