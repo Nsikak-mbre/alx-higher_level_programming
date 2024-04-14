@@ -15,14 +15,8 @@ def say_my_name(first_name, last_name=""):
     Returns:
     (str): value for both names, or error message if any wrong type is supplied
     """
-    if (not isinstance(first_name, str)) or not first_name.strip():
+    if not isinstance(first_name, str):
         raise TypeError('first_name must be a string')
-    if last_name != '':
-        if not isinstance(last_name, str) or not last_name.strip():
-            raise TypeError('last_name must be a string')
-
-    if last_name:
-        full_name = first_name.strip() + ' ' + last_name.strip()
-    else:
-        full_name = first_name.strip()
+    if not isinstance(last_name, str):
+        raise TypeError('last_name must be a string')
     print('My name is {} {}'.format(first_name, last_name))
