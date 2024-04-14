@@ -25,5 +25,4 @@ def say_my_name(first_name, last_name=""):
         full_name = first_name.strip() + ' ' + last_name.strip()
     else:
         full_name = first_name.strip()
-    print('My name is', full_name if last_name else first_name)
-# PEP standard
+    print('My name is {} {}'.format(first_name, last_name))
