@@ -1,56 +1,68 @@
-			Test say_my_name  function
-			==========================
-This aims to test say_my_name with possible edge cases, and values users might input, to 
-ensure the right exception is thrown
-- Function accepts two (string) parameters
-- Lastname is optional
-- Sends any error custom message when wrong type is supplied
 
-Start by Importing Function to be tested
-========================================
+===========================
+How to Use 3-say_my_name.py
+===========================
 
-# Test with expected value
->>> say_my_name = __import__('3-say_my_name').say_my_name
->>> say_my_name('Nsikak', 'Sunday')
-My name is Nsikak Sunday
+This modules defines a function ``say_my_name(first_name, last_name="")``.
 
-# Test with optional last Name
->>> say_my_name('Nsikak')
-My name is Nsikak
+Usage
+=====
 
-# Test with non string values
->>> say_my_name('Nsikak', 007)
-Traceback (most recent call last):
-...
-SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
 
->>> say_my_name('Nsikak', 7)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
+::
 
->>> say_my_name(2.3, 'Nsikak')
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Brennan", "Baraban")
+    My name is Brennan Baraban
 
-# Test with None
->>> say_my_name(None)
-Traceback (most recent call last):
-TypeError: first_name must be a string
+::
 
-# Edge case, without any parameter provided
->>> say_my_name()
-Traceback (most recent call last):
-...
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+    >>> say_my_name("Cornelius Maxwell", "Jones II")
+    My name is Cornelius Maxwell Jones II
 
->>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
 
->>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
+::
+
+    >>> say_my_name("Brennan")
+    My name is Brennan 
+
+Invalid Names
+=============
+
+The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
+a TypeError is raised.
+
+::
+
+    >>> say_my_name(6, "James")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+At least one name must be provided.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
