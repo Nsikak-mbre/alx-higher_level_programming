@@ -18,6 +18,12 @@ My name is Nsikak Sunday
 >>> say_my_name('Nsikak')
 My name is Nsikak
 
+# Test with non string values
+>>> say_my_name('Nsikak', 007)
+Traceback (most recent call last):
+...
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+
 >>> say_my_name('Nsikak', 7)
 Traceback (most recent call last):
 ...
@@ -39,8 +45,12 @@ Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
-# Test with both wrong parameters
->>> say_my_name(11, 11)
+>>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
