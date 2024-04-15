@@ -1,0 +1,58 @@
+					Test Print square
+					=================
+ This aims to test a function which prints out character '#' in the shape of a square,'print_square' function accepts a parameter whic sets the size of the square to be printed.
+
+- Function accepts one (int) parameter
+- Prints a custom message if user gives wrong input which should set size of square
+		
+	Start by Importing Function to be Tested
+	========================================
+>>> print_square = __import__('4-print_square').print_square
+
+# Test with no given parameter
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+# Test with negative floating number
+>>> print_square(-3.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Test with negative int value
+>>> print_square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+
+# Test with None
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Test with floating point value
+>>> print_square(2.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Test with a string value
+>>> print_square('Boy')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+# Test with ccorrect value
+>>> print_square(3)
+###
+###
+###
+
+
+
+
