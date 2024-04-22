@@ -1,0 +1,36 @@
+			Test for sorted list Public instance
+			====================================
+
+# First Import function
+>>> MyList = __import__('1-my_list').MyList
+
+# Input expected value(int) to check functionality
+>>> my_list = MyList([3, 1, 2])
+>>> my_list.print_sorted()
+[1, 2, 3]
+>>> my_list
+[3, 1, 2]
+
+# Test with undefined input
+>>> that_list.print_sorted()
+Traceback (most recent call last):
+...
+NameError: name 'that_list' is not defined
+
+# Test with an empty list with no elements
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+
+# Test with negative integer
+>>> my_list = MyList([2, -1, -11])
+>>> my_list.print_sorted()
+[-11, -1, 2]
+
+# Test with parent object
+>>> my_list = [1, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+AttributeError: 'list' object has no attribute 'print_sorted'
+
