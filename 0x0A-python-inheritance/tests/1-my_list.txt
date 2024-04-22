@@ -1,21 +1,15 @@
 			Test for sorted list Public instance
 			====================================
 
-# First Import function
 >>> MyList = __import__('1-my_list').MyList
 
-# Input expected value(int) to check functionality
+# Test printing a sorted list
 >>> my_list = MyList([3, 1, 2])
 >>> my_list.print_sorted()
 [1, 2, 3]
 >>> my_list
 [3, 1, 2]
 
-# Test with undefined input
->>> that_list.print_sorted()
-Traceback (most recent call last):
-...
-NameError: name 'that_list' is not defined
 
 # Test with an empty list with no elements
 >>> my_list = MyList([])
