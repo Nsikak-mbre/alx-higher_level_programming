@@ -15,4 +15,4 @@ def read_file(filename=""):
     if filename:
         with open(filename, encoding='utf-8') as file:
             for line in file:
-            print(line, end='')
+                print(line, end='')
