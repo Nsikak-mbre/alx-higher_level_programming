@@ -2,7 +2,7 @@
 """Appends strings at file end"""
 
 
-def append_writw(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Accepts two Parameters
 
@@ -14,5 +14,5 @@ def append_writw(filename="", text=""):
         Number of characters added
     """
     with open(filename, 'a', encoding='utf-8') as file:
-        chars_append = file.write(text)
-    return chars_append
+        chars_added = file.write(text)
+    return chars_added
