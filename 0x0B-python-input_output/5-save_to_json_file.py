@@ -14,4 +14,4 @@ def save_to_json_file(my_obj, filename):
         Json tect representation of given Object
     """
     with open(filename, 'w', encoding='utf-8') as file:
-        json.dump(my_obj, file, indent=4)
+        json.dump(my_obj, file, sort_keys=True)
