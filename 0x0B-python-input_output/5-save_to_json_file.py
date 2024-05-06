@@ -4,15 +4,6 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
-    """
-    Accepts Object and file destination
-
-    Args:
-        my_obj(object): Data-type in Python
-        filename(json): Name of Json file
-
-    Returns:
-        Json tect representation of given Object
-    """
-    with open(filename, 'w', encoding='utf-8') as file:
+    """Returns Json representation of an object"""
+    with open(filename, 'w') as file:
         json.dump(my_obj, file)

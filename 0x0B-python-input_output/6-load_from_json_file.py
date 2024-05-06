@@ -4,10 +4,7 @@ import json
 
 
 def load_from_json_file(filename):
-    """
-    Returns:
-        Python Object representation of json file
-    """
-    with open(filename, 'r') as file:
+    """Python Object representation of json file"""
+    with open(filename) as file:
         json_data = file.read()
         return json.loads(json_data)
