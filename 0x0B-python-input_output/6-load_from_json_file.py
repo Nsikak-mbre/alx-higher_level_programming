@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Creates an object from json file"""
+"""Creates an object from json file."""
 import json
 
 
