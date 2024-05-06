@@ -9,6 +9,7 @@ def save_to_json_file(my_obj, filename):
 
     Args:
         my_obj(object): Data-type in Python
+        filename(json): Name of Json file
 
     Returns:
         Json tect representation of given Object
