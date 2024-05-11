@@ -84,7 +84,7 @@ class Rectangle(Base):
             print("#" * self.width)
 
     def __str__(self):
-        """Custom string represnetation of class"""
+        """Custom string representation of rectangle class."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
