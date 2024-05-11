@@ -82,3 +82,9 @@ class Rectangle(Base):
         """prints out visual representation of Rectangle"""
         for _ in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """Custom string represnetation of class"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
