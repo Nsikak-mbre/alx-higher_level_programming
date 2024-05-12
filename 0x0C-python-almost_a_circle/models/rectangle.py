@@ -91,7 +91,7 @@ class Rectangle(Base):
                                                        self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """Assigns values using *args if provided,else **kwargs"""
+        """Assigns values using *args if provided,else **kwargs."""
         attributes = ["id", 'width', 'height', 'x', 'y']
         for attribute, value in zip(attributes, args):
             setattr(self, attribute, value)
