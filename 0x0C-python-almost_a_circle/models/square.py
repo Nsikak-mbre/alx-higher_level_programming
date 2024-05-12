@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class that inherits from Rectangle"""
+"""Square class that inherits from Rectangle."""
 from models.rectangle import Rectangle
 
 
@@ -16,7 +16,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Custom string which overrides, inherited implemtation"""
+        """Custom string which overrides, inherited implemtation."""
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x, self.y,
                                                  self.height)
