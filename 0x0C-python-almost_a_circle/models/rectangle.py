@@ -90,8 +90,12 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
-    def update(self, *args):
-        """Update the Rectangle instance attributes with new values"""
+    def update(self, *args, **kwargs):
+        """Assigns values using *args if provided,else **kwargs"""
         attributes = ["id", 'width', 'height', 'x', 'y']
         for attribute, value in zip(attributes, args):
             setattr(self, attribute, value)
+        if not args:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
