@@ -1,4 +1,4 @@
 -- list tables all tables in a database
 SELECT table_name
 FROM information_schema.tables
-WHERE table_schema = ?;
+WHERE table_schema = '${DATABASE_NAME}';
