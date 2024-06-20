@@ -1,0 +1,1 @@
+-- creates a unique id in my SQL server
