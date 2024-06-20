@@ -1,4 +1,5 @@
 -- creates a table(unique_id) with a which is unique
 CREATE TABLE IF NOT EXISTS unique_id (
-    id INT DEFAULT 1 UNIQUE
+    id INT DEFAULT 1 UNIQUE,
+    name VARCHAR(256)
 )
