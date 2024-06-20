@@ -1,1 +1,4 @@
--- creates a unique id in my SQL server
+-- creates a table(unique_id) with a which is unique
+CREATE TABLE IF NOT EXISTS unique_id (
+    id INT DEFAULT 1 UNIQUE
+)
