@@ -4,5 +4,5 @@ const number = parseInt(args[2]);
 if (isNaN(number)) {
   console.log('Not a number');
 } else {
-  console.log('My number:', number.toPrecision(2));
+  console.log('My number:', number);
 }
