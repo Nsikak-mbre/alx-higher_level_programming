@@ -1,4 +1,3 @@
 {
-    "extends": ["semistandard"]
-  }
-  
+  "extends": ["airbnb-base", "semistandard"]
+}
