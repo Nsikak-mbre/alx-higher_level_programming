@@ -1,14 +1,13 @@
 #!/usr/bin/node
-function reverseArr (arr) {
+exports.esrever = function (list) {
   let start = 0;
-  let end = arr.length - 1;
+  let end = list.length - 1;
   while (start < end) {
-    const temp = arr[start];
-    arr[start] = arr[end];
-    arr[end] = temp;
+    const temp = list[start];
+    list[start] = list[end];
+    list[end] = temp;
     start++;
     end--;
   }
-  return arr;
+  return list;
 }
-module.exports = reverseArr;
