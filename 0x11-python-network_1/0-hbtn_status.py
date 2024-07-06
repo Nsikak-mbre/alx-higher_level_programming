@@ -12,6 +12,6 @@ if __name__ == '__main__':
         body = resp.read()
 
     print('Body resp:')
-    print('\t- type', type(body))
+    print('\t- type:', type(body))
     print('\t- content:', body)
     print('\t- utf8 content:', body.decode('utf-8'))
