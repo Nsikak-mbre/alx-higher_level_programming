@@ -1,5 +1,3 @@
 #!/bin/bash
-# sends a delete request passed as first agument
-# Diplays the body of the response
-
+# sends a delete request, respond request displays body
 curl -sX DELETE "$1"
