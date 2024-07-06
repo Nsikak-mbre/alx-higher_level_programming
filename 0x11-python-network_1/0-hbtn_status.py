@@ -3,6 +3,9 @@
 This module fetches https://alx-intranet.hbtn.io/status
 and displays the body of the response.
 """
+
+
+if __name__ == '__main__':
 import urllib.request
 
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
