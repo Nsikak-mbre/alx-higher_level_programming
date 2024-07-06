@@ -3,8 +3,6 @@
 This module fetches https://alx-intranet.hbtn.io/status
 and displays the body of the response.
 """
-
-
 import urllib.request
 
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
