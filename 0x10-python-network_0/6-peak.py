@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# finds peak amongst unsorted integers
 def find_peak(list_of_integers):
     """
     Find a peak element in a list of unsorted integers.
