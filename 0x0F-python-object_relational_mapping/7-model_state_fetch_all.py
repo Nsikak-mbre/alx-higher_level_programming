@@ -12,7 +12,7 @@ if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
-    
+
     # Generate a new Session class
     Session = sessionmaker(bind=engine)
     # maanges current session
