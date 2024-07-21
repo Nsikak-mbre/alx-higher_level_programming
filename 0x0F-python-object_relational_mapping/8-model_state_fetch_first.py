@@ -18,5 +18,5 @@ if __name__ == "__main__":
     if first_state_obj:
         print("{}: {}".format(first_state_obj.id, first_state_obj.name))
     else:
-        print("Nothing\n")
+        print("Nothing")
     session.close()
