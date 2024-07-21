@@ -14,9 +14,10 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
     # Generate a new Session class
     Session = sessionmaker(bind=engine)
+    # maanges current session
     session = Session()
 
     states = session.query(State).order_by(State.id).all()
 
     for state in states:
-        print("{}:{}".format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
