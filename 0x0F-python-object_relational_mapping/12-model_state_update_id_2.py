@@ -14,7 +14,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    update_item = session.query(State).where(State.id == 2).first()\
+    update_item = session.query(State).where(State.id == 2)\
         .update({'name': 'New Mexico'})
 
     session.commit()
