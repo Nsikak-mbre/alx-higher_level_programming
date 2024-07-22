@@ -17,6 +17,7 @@ if __name__ == '__main__':
     update_item = session.query(State).filter(State.id == 2).first()
 
     if update_item:
-        update_item.name = 'New Mexico'
+        update_item.name = "New Mexico"
         session.commit()
+
     session.close()
