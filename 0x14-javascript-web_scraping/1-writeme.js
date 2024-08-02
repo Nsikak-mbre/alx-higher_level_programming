@@ -6,7 +6,7 @@ const writeTo = process.argv[3];
 
 if (!filePath || !writeTo) { process.exit(1); }
 
-fs.writeFile(filePath, writeTo, 'utf-8', (err) => {
+fs.writeFile(filePath, writeTo || '', 'utf-8', (err) => {
   if (err) {
     console.error(err);
     process.exit(1);
