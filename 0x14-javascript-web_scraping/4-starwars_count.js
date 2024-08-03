@@ -5,9 +5,6 @@ const url = process.argv[2];
 const userId = '18';
 
 request(url, (error, response, body) => {
-  if (error) {
-    console.error(error);
-  }
   if (response.statusCode === 200) {
     const data = JSON.parse(body);
     const films = data.results;
@@ -15,5 +12,7 @@ request(url, (error, response, body) => {
       film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${userId}/`)
     );
     console.log(userMovies.length);
+  } else {
+    console.error(error);
   }
 });
