@@ -13,7 +13,7 @@ class Node:
         def data(self):
             """get data of node"""
             return self.__data
-        
+
         @data.setter
         def data(self, value):
             """set data of node"""
@@ -25,7 +25,7 @@ class Node:
         def next_node(self):
             """get next node"""
             return self.__next_node
-        
+
         @next_node.setter
         def next_node(self, value):
             """points to next-node"""
@@ -36,7 +36,6 @@ class Node:
 
 class SinglyLinkedList:
     """Singly linked list class"""
-
 
     def __init__(self):
         self.__head = None
