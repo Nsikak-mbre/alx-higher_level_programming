@@ -9,30 +9,29 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-        @property
-        def data(self):
-            """get data of node"""
-            return self.__data
+    @property
+    def data(self):
+        """Get data of node"""
+        return self.__data
 
-        @data.setter
-        def data(self, value):
-            """set data of node"""
-            if not isinstance(value, int):
-                raise TypeError('data must be an integer')
-            self.__data = value
+    @data.setter
+    def data(self, value):
+        """Set data of node"""
+        if not isinstance(value, int):
+            raise TypeError('data must be an integer')
+        self.__data = value
 
-        @property
-        def next_node(self):
-            """get next node"""
-            return self.__next_node
+    @property
+    def next_node(self):
+        """Get next node"""
+        return self.__next_node
 
-        @next_node.setter
-        def next_node(self, value):
-            """points to next-node"""
-            if not isinstance(value, Node) and value is not None:
-                raise TypeError('next_node must be a Node object')
-            self.__next_node = value
-
+    @next_node.setter
+    def next_node(self, value):
+        """Set next node"""
+        if not isinstance(value, Node) and value is not None:
+            raise TypeError('next_node must be a Node object')
+        self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -42,16 +41,17 @@ class SinglyLinkedList:
         self.__head = None
 
     def __str__(self):
-        """string representation of singly linked list"""
+        """String representation of singly linked list"""
         string = ''
         current = self.__head
         while current:
             string += str(current.data) + '\n'
             current = current.next_node
-        return string
+        return string.strip()
 
     def sorted_insert(self, value):
         """Inserts a node in sorted order
+
         Args:
             value (int): value to insert
         """
