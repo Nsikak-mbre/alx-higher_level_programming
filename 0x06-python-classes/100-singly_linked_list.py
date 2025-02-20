@@ -10,25 +10,25 @@ class Node:
         self.next_node = next_node
 
     @property
-    def data(self):
-        """get data of node"""
+    def data(self):  # change here
+        """Get data of node"""
         return self.__data
 
     @data.setter
-    def data(self, value):
-        """set data of node"""
+    def data(self, value):  # change here
+        """Set data of node"""
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
         self.__data = value
 
     @property
-    def next_node(self):
-        """get next node"""
+    def next_node(self):  # change here
+        """Get next node"""
         return self.__next_node
 
     @next_node.setter
-    def next_node(self, value):
-        """points to next-node"""
+    def next_node(self, value):  # change here
+        """Set next node"""
         if not isinstance(value, Node) and value is not None:
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
@@ -40,17 +40,18 @@ class SinglyLinkedList:
     def __init__(self):
         self.__head = None
 
-    def __str__(self):
-        """string representation of singly linked list"""
+    def __str__(self):  # change here
+        """String representation of singly linked list"""
         string = ''
         current = self.__head
         while current:
             string += str(current.data) + '\n'
             current = current.next_node
-        return string
+        return string.strip()  # change here
 
     def sorted_insert(self, value):
         """Inserts a node in sorted order
+
         Args:
             value (int): value to insert
         """
